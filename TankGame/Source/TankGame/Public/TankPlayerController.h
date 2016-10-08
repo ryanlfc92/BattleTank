@@ -15,6 +15,12 @@ class TANKGAME_API ATankPlayerController : public APlayerController
 	
 public:
 	ATank* GetControlledTank() const;
+	virtual void BeginPlay() override;
+	virtual void Tick(float DeltaSeconds) override;
+    //move tank barrel along the crosshair every tick.
+	void AimTowardsCrosshair();
 	
 	
+	private:
+	bool GetSightRayHitLocation(FVector& HitLocation) const;
 };
