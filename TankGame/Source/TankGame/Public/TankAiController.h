@@ -15,7 +15,8 @@ class TANKGAME_API ATankAiController : public AAIController
 	GENERATED_BODY()
 
 private:
-
+	
+	    virtual void Tick(float DeltaSeconds) override;
 	    
 		void BeginPlay()override;
 		
