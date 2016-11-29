@@ -3,7 +3,7 @@
 
 #include "TankGame.h"
 #include "TankAiController.h"
-
+#include "Tank.h"
 
 
 void ATankAiController::Tick(float DeltaTime)
