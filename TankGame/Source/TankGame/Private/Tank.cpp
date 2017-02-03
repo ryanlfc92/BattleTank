@@ -15,6 +15,8 @@ ATank::ATank()
 	TankAimingComponent = CreateDefaultSubobject<UTankAimingComponent>(FName("Aiming Component"));
 }
 
+
+
 void ATank::SetBarrelReference(UTankBarrel* BarrelToSet)
 
 {
@@ -54,4 +56,10 @@ void ATank::AimAt(FVector HitLocation)
 {
 	
 	TankAimingComponent->AimAt(HitLocation, LaunchSpeed);
+}
+
+void ATank::Fire()
+{
+	auto time = GetWorld()->GetTimeSeconds();
+	UE_LOG(LogTemp, Warning, TEXT("%f: Tank fired"), time);
 }
