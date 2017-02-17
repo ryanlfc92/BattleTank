@@ -28,15 +28,7 @@ void ATankPlayerController::BeginPlay()
 	Super::BeginPlay();
 	
 
-	auto ControlledTank = GetControlledTank();
-	if (!ControlledTank)
-	{
-		UE_LOG(LogTemp, Warning, TEXT("player controller not possessing a tank."));
-	}
-	else
-	{
-		UE_LOG(LogTemp, Warning, TEXT("player controller possessing %s."), *(ControlledTank->GetName()));
-	}
+	
 }
 
 void ATankPlayerController::AimTowardsCrosshair()
