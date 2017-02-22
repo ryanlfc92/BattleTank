@@ -5,7 +5,7 @@
 #include "Projectile.h"
 #include "TankAimingComponent.h"
 #include "TankBarrel.h"
-#include "TankMovementComponent.h"
+
 
 
 
@@ -39,7 +39,7 @@ void ATank::BeginPlay()
 {
 	Super::BeginPlay();
 	
-	
+	TankAimingComponent = FindComponentByClass<UTankAimingComponent>();
 }
 
 
