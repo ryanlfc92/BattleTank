@@ -7,15 +7,30 @@
 
 
 class ATank;
-
+class UTankAimingComponent;
+/**
+*   responsible for helping player aim
+*/
 UCLASS()
 class TANKGAME_API ATankPlayerController : public APlayerController
 {
 	GENERATED_BODY()
 
+
+
+		
+protected:
+
+	UFUNCTION(BlueprintCallable, Category = "Setup")
+		ATank* GetControlledTank() const;
+
+	UFUNCTION(BlueprintImplementableEvent, Category = "Setup")
+		void FoundAimingComponent(UTankAimingComponent* AimCompRef);
+	
 private:
 
-	ATank* GetControlledTank() const;
+	
+	
 	virtual void BeginPlay() override;
 	virtual void Tick(float DeltaSeconds) override;
     //move tank barrel along the crosshair every tick.
